@@ -1,11 +1,26 @@
-
+/* Setting all elements to use border-box for box-sizing to ensure padding and border are included in the element's total width and height */
 * {
    box-sizing: border-box;
 }
-body, section, header, div, p, h1, h2, h3, ul, li, figure, figcaption {
+
+/* Removing default margin and padding from all major elements to reset browser styling */
+body,
+section,
+header,
+div,
+p,
+h1,
+h2,
+h3,
+ul,
+li,
+figure,
+figcaption {
    margin: 0;
    padding: 0;
 }
+
+/* Styling the body with a light background color and setting the default font family and weight */
 body {
    font-family: 'Open Sans', sans-serif;
    box-sizing: border-box;
@@ -13,4 +28,144 @@ body {
    font-weight: 300;
 }
 
-/* add styles here */
+/* Styling the header with an image as the background, covering the entire area */
+header {
+   background-image: url(images/florence.jpg);
+   background-size: cover;
+   width: 100%;
+   min-height: 500px;
+}
+
+/* Setting the navigation bar with a background image, padding, and height */
+nav {
+   background-image: url(images/logo.svg);
+   background-size: 60px;
+   background-repeat: no-repeat;
+   background-position: 10px 5px;
+   padding: 20px;
+   height: 100px;
+}
+
+/* Adjusting the margin for the unordered list inside nav */
+nav ul {
+   margin-left: 80px;
+}
+
+/* Setting list items to display inline without bullets */
+nav li {
+   display: inline-block;
+   list-style-type: none;
+}
+
+/* Styling the links in navigation with color, padding, and removing underline */
+nav a {
+   color: #51279b;
+   text-decoration: none;
+   padding: 10px;
+   font-weight: 600;
+}
+
+/* Styling visited navigation links */
+nav a:visited {
+   color: #8662c7;
+}
+
+/* Adding hover effect to navigation links */
+nav a:hover {
+   color: #8662c7;
+   text-decoration: underline;
+}
+
+/* Centering text in the hero section of the header */
+header div {
+   margin: 100px 0 0 80px;
+   color: white;
+}
+
+/* Styling the main header text in the hero section */
+header h2 {
+   font-size: 48px;
+   margin-bottom: 0.5rem;
+}
+
+/* Styling the paragraph in the hero section */
+header p {
+   font-size: 24px;
+   margin-bottom: 1.5rem;
+}
+
+/* Styling the button in the header with background color, padding, and border radius */
+header div a {
+   background-color: #51279b;
+   color: white;
+   padding: 10px 20px;
+   text-decoration: none;
+   border-radius: 5px;
+}
+
+/* Adding hover effect to the button in the header */
+header div a:hover {
+   background-color: #8662c7;
+}
+
+/* Using Flexbox to lay out the cards in the main content area */
+main {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+/* Setting card layout and dimensions with equal width distribution and margin */
+.card {
+   flex: 1 1 calc(33.333% - 20px);
+   margin: 10px;
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+}
+
+/* Adding padding and making the content area flexible to fill space */
+.card div {
+   padding: 20px 5px;
+   flex-grow: 1;
+}
+
+/* Ensuring images inside cards are full width and maintain aspect ratio */
+.card img {
+   width: 100%;
+   height: auto;
+}
+
+/* Styling the description text inside cards */
+.card div.description {
+   font-size: 12px;
+}
+
+/* Styling card titles */
+.card h3 {
+   font-size: 14px;
+}
+
+/* Styling the social icons area in cards with top margin and font size */
+.social {
+   margin-top: 1rem;
+   font-size: 12px;
+}
+
+/* Styling individual social icons with background, padding, and margin */
+.social span {
+   background-size: contain;
+   background-repeat: no-repeat;
+   padding-left: 25px;
+   margin-right: 10px;
+}
+
+/* Setting the background image for the heart icon */
+.social .heart {
+   background-image: url(images/heart.png);
+}
+
+/* Setting the background image for the comment icon */
+.social .comment {
+   background-image: url(images/comment.png);
+}
